@@ -27,7 +27,7 @@ namespace ProgramacionOrientadaObjetosII
 
 			richTextBox1.Text += productos.producto_codigo + productos.producto_nombre + productos.producto_precio;*/		
 			listaproductos.Add();
-			//test
+			//tes
 		}
 
 		private void cargaProductos()
