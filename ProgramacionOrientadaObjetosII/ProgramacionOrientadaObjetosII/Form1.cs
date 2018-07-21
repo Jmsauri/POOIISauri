@@ -40,7 +40,7 @@ namespace ProgramacionOrientadaObjetosII
 				int counter = 0;
 				string line;
 				System.IO.StreamReader file =
-				new System.IO.StreamReader(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\bin\Debug\practica.csv");
+				new System.IO.StreamReader(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\bin\Debug\productos.csv");
 				while ((line = file.ReadLine()) != null)
 				{
 					dataGridView1.Text += line + Environment.NewLine;
