@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LibPrintTicket">
+      <HintPath>dll\LibPrintTicket.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +62,12 @@
     <Compile Include="Punto_Venta.Designer.cs">
       <DependentUpon>Punto_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPrint.Designer.cs">
+      <DependentUpon>TestPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Verificador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="Punto_Venta.resx">
       <DependentUpon>Punto_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPrint.resx">
+      <DependentUpon>TestPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Verificador.resx">
       <DependentUpon>Verificador.cs</DependentUpon>

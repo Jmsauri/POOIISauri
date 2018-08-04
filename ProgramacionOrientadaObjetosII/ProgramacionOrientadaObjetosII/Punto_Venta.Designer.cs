@@ -29,11 +29,18 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.PU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,11 +84,48 @@
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(13, 79);
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cantidad,
+            this.Producto,
+            this.PU,
+            this.Column1});
+			this.dataGridView1.Location = new System.Drawing.Point(19, 62);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+			this.dataGridView1.RowHeadersVisible = false;
+			this.dataGridView1.Size = new System.Drawing.Size(356, 150);
 			this.dataGridView1.TabIndex = 3;
+			this.dataGridView1.TabStop = false;
+			// 
+			// Cantidad
+			// 
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Cantidad.DefaultCellStyle = dataGridViewCellStyle1;
+			this.Cantidad.HeaderText = "Cantidad";
+			this.Cantidad.Name = "Cantidad";
+			this.Cantidad.ReadOnly = true;
+			// 
+			// Producto
+			// 
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Producto.DefaultCellStyle = dataGridViewCellStyle2;
+			this.Producto.HeaderText = "Producto";
+			this.Producto.Name = "Producto";
+			this.Producto.ReadOnly = true;
+			// 
+			// PU
+			// 
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.PU.DefaultCellStyle = dataGridViewCellStyle3;
+			this.PU.HeaderText = "PU";
+			this.PU.Name = "PU";
+			this.PU.ReadOnly = true;
+			// 
+			// Column1
+			// 
+			this.Column1.HeaderText = "Total";
+			this.Column1.Name = "Column1";
+			this.Column1.ReadOnly = true;
 			// 
 			// textBox1
 			// 
@@ -89,7 +133,10 @@
 			this.textBox1.Location = new System.Drawing.Point(12, 235);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(241, 38);
-			this.textBox1.TabIndex = 4;
+			this.textBox1.TabIndex = 0;
+			this.textBox1.TabStop = false;
+			
+			this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
 			// 
 			// label4
 			// 
@@ -133,5 +180,9 @@
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+		private System.Windows.Forms.DataGridViewTextBoxColumn PU;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 	}
 }
