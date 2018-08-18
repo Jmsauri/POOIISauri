@@ -26,6 +26,7 @@ namespace ProgramacionOrientadaObjetosII
 			label2.Location = new Point(this.Width / 2 - label2.Width / 2, label1.Height+11);
 			label3.Text = DateTime.Now.ToString();
 			label3.Location = new Point(this.Width / 2 - label3.Width / 2, label2.Height + label2.Height + 21);
+			
 		}
 
 		private void timer1_Tick(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace ProgramacionOrientadaObjetosII
 		{
 			string[] infoProducto;
 			string line;
-			StreamReader file = new StreamReader("productos.csv");
+			StreamReader file = new StreamReader(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\bin\Debug\productos.csv");
 
 			while ((line = file.ReadLine()) != null)
 			{
@@ -66,7 +67,7 @@ namespace ProgramacionOrientadaObjetosII
 
 			if (!codigoencontrado)
 			{
-				label4.Text = " Codigo No Encontrado ";
+				label4.Text = "Codigo No Encontrado";
 				label4.Location = new Point(this.Width / 2 - label4.Width / 2, label2.Height + label2.Height + 40);
 			}
 

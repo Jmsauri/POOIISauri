@@ -45,6 +45,7 @@ namespace ProgramacionOrientadaObjetosII
 			dataGridView1.Columns[2].Width = Convert.ToInt32(this.Width * 0.20 + "");
 			dataGridView1.Columns[3].Width = Convert.ToInt32(this.Width * 0.20 + "");
 
+			textBox1.Focus();
 			upDateFont();
 		}
 
@@ -166,8 +167,8 @@ namespace ProgramacionOrientadaObjetosII
 
 		private void pagar()
 		{
-			this.AcTotal = Convert.ToDouble(textBox1.Text) - this.AcTotal;
-			label4.Text = "Cambio: $" + AcTotal.ToString("n");
+			//this.AcTotal = Convert.ToDouble(textBox1.Text) - this.AcTotal;
+			//label4.Text = "Cambio: $" + AcTotal.ToString("n");
 
 			label4.Location = new Point(this.Width - label4.Width + 2, this.Height - textBox1.Height - label4.Height);
 
@@ -193,9 +194,12 @@ namespace ProgramacionOrientadaObjetosII
 			try
 			{
 				Ticket ticket = new Ticket();
-				ticket.HeaderImage = Image.FromFile(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\img\caldiabl.jpg");
+				ticket.HeaderImage = Image.FromFile(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\img\caldiabl(1).jpg");
 				ticket.AddSubHeaderLine(DateTime.Now.ToShortDateString());
 				ticket.AddSubHeaderLine(DateTime.Now.ToShortTimeString());
+
+				double Cambio = 0;
+				Cambio = double.Parse(textBox1.Text) - AcTotal;
 
 				for (int i = 0; i < dataGridView1.RowCount-1; i++)
 				{
@@ -203,16 +207,20 @@ namespace ProgramacionOrientadaObjetosII
 						dataGridView1[1, i].Value.ToString(),
 						dataGridView1[3, i].Value.ToString());
 				}
-				ticket.AddFooterLine("Total: $" + label4.Text);
-				ticket.AddFooterLine("Cambio: $" + label4.Text);
-				
+				ticket.AddFooterLine("Total: $" + (AcTotal < 10 ? AcTotal.ToString("0.00") : (AcTotal < 100 ? AcTotal.ToString("00.00") : AcTotal.ToString("000.00"))));
+				ticket.AddFooterLine("Cambio: $" + (Cambio < 10 ? Cambio.ToString("0.00") : (Cambio < 100 ? Cambio.ToString("00.00") : Cambio.ToString("000.00"))));
+
 
 				ticket.AddFooterLine("Gracias por su Compra");
 				ticket.AddFooterLine("Vuelva Pronto");
 				ticket.AddFooterLine("Visita nuestro sitio web: www.xxx.com.mx");
 
 				//ticket.PrintTicket("EC-PM-5890X");
-				ticket.PrintTicket("Microsoft Print to PDF");
+				//ticket.PrintTicket("EC-PM-5890X");
+				if (ticket.PrinterExists("PDFCreator"))
+				{
+					ticket.PrintTicket("PDFCreator");
+				}
 
 			}
 			catch (Exception error)

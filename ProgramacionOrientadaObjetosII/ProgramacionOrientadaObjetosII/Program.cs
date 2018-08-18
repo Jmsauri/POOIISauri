@@ -16,7 +16,7 @@ namespace ProgramacionOrientadaObjetosII
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Punto_Venta());
+			Application.Run(new MenuPuntodeVenta());
 		}
 	}
 }

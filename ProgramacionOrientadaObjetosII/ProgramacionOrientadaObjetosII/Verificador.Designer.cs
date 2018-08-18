@@ -34,6 +34,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.label4 = new System.Windows.Forms.Label();
+			this.timer2 = new System.Windows.Forms.Timer(this.components);
 			this.SuspendLayout();
 			// 
 			// label1
@@ -109,5 +110,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Timer timer2;
 	}
 }

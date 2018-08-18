@@ -63,6 +63,66 @@ namespace ProgramacionOrientadaObjetosII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _09210481 {
+            get {
+                object obj = ResourceManager.GetObject("09210481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17214223 {
+            get {
+                object obj = ResourceManager.GetObject("17214223", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17214280 {
+            get {
+                object obj = ResourceManager.GetObject("17214280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17214357 {
+            get {
+                object obj = ResourceManager.GetObject("17214357", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20180811_123538 {
+            get {
+                object obj = ResourceManager.GetObject("20180811_123538", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caldiabl_1_ {
+            get {
+                object obj = ResourceManager.GetObject("caldiabl(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_f_cross_256_282471 {
             get {
                 object obj = ResourceManager.GetObject("if_f-cross_256_282471", resourceCulture);
@@ -86,6 +146,16 @@ namespace ProgramacionOrientadaObjetosII.Properties {
         internal static System.Drawing.Bitmap if_view_refresh_118801 {
             get {
                 object obj = ResourceManager.GetObject("if_view-refresh_118801", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_13230 {
+            get {
+                object obj = ResourceManager.GetObject("user_13230", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

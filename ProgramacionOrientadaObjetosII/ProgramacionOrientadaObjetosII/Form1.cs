@@ -17,6 +17,8 @@ namespace ProgramacionOrientadaObjetosII
 		Productos[] producto = new Productos[3];
 		private int rowSelect;
 
+		public object DataGridView1 { get; private set; }
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -39,8 +41,7 @@ namespace ProgramacionOrientadaObjetosII
 			{
 				int counter = 0;
 				string line;
-				System.IO.StreamReader file =
-				new System.IO.StreamReader(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\bin\Debug\productos.csv");
+				System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\bin\Debug\productos.csv");
 				while ((line = file.ReadLine()) != null)
 				{
 					dataGridView1.Text += line + Environment.NewLine;
@@ -54,6 +55,33 @@ namespace ProgramacionOrientadaObjetosII
 			{
 				MessageBox.Show("No sale" + error);
 			}
+		}
+
+		private void GuardarProducto()
+		{
+			try
+			{
+				using (var fileStream = new FileStream(String.Format(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\bin\Debug\productos.csv"), FileMode.Truncate))
+				{
+				
+				}
+					
+					//fileStream = fileStream = new FileStream(String.Format(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\bin\Debug\productos.csv"), FileMode.OpenOrCreate);
+					using (StreamWriter streamWriter = File.AppendText(@"C:\Users\JmSaurii\source\repos\NewRepo2\ProgramacionOrientadaObjetosII\ProgramacionOrientadaObjetosII\bin\Debug\productos.csv"))
+					{
+						foreach (DataGridViewRow row in dataGridView1.Rows)
+						{
+							streamWriter.WriteLine(row.Cells[0].Value.ToString() + "," + row.Cells[1].Value.ToString() + "," + row.Cells[2].Value.ToString());
+						}
+					}
+				
+			}
+			catch (Exception error)
+			{
+				MessageBox.Show("No sale" + error);
+			}
+
+
 		}
 
 		private void BtnAdd_Click(object sender, EventArgs e)
@@ -96,6 +124,7 @@ namespace ProgramacionOrientadaObjetosII
 			NProducto.Clear();
 			Precio.Clear();
 			IdProducto.Focus();
+			IdProducto.Enabled = true;
 		}
 
 		private void dataGridView1_Numerar()
@@ -121,6 +150,18 @@ namespace ProgramacionOrientadaObjetosII
 
 		private void button3_Click(object sender, EventArgs e)
 		{
+			if (Precio.Text.Trim().Length == 0)
+			{
+				MessageBox.Show("Ingresa el precio para poder continuar!!!");
+				Precio.Focus();
+				return;
+			}
+			if(NProducto.Text.Trim().Length == 0)
+			{
+				MessageBox.Show("Ingresa el Nombre del producto!!!");
+				NProducto.Focus();
+				return;
+			}
 			if (MessageBox.Show("Desea Modificar" + dataGridView1[1, rowSelect].Value.ToString() + "Precio:" + dataGridView1[2, rowSelect].Value.ToString(), "Eliminar Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 			{
 				dataGridView1[1, rowSelect].Value = NProducto.Text;
@@ -129,13 +170,25 @@ namespace ProgramacionOrientadaObjetosII
 			limpiar();
 		}
 
-		private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-		{
-			MessageBox.Show("Verificar que se guardo");
+		////private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+		//{
+		//	MessageBox.Show("Verificar que se guardo");
 
-			dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-			DataObject dataObject = dataGridView1.GetClipboardContent();
-			File.WriteAllText("practica.csv", dataObject.GetText(TextDataFormat.CommaSeparatedValue));
+		//	dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+		//	DataObject dataObject = dataGridView1.GetClipboardContent();
+		//	File.WriteAllText("practica.csv", dataObject.GetText(TextDataFormat.CommaSeparatedValue));
+		//}
+
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			GuardarProducto();
+			
+
+			//MessageBox.Show("Verificar que se guardo");
+
+			//dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+			//DataObject dataObject = dataGridView1.GetClipboardContent();
+			//File.WriteAllText("practica.csv", dataObject.GetText(TextDataFormat.CommaSeparatedValue));
 		}
 	}
 	class Productos

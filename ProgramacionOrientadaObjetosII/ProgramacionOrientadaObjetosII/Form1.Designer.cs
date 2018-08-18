@@ -62,10 +62,10 @@
             this.Column1,
             this.Column2,
             this.Column3});
-			this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+			this.dataGridView1.Location = new System.Drawing.Point(12, 3);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(351, 426);
+			this.dataGridView1.Size = new System.Drawing.Size(363, 426);
 			this.dataGridView1.TabIndex = 1;
 			this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
 			// 
@@ -90,7 +90,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(369, 37);
+			this.label1.Location = new System.Drawing.Point(395, 33);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(62, 13);
 			this.label1.TabIndex = 2;
@@ -99,7 +99,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(369, 82);
+			this.label2.Location = new System.Drawing.Point(395, 79);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(44, 13);
 			this.label2.TabIndex = 3;
@@ -108,7 +108,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(369, 133);
+			this.label3.Location = new System.Drawing.Point(395, 129);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(37, 13);
 			this.label3.TabIndex = 4;
@@ -117,21 +117,21 @@
 			// IdProducto
 			// 
 			this.IdProducto.Cursor = System.Windows.Forms.Cursors.AppStarting;
-			this.IdProducto.Location = new System.Drawing.Point(446, 30);
+			this.IdProducto.Location = new System.Drawing.Point(476, 30);
 			this.IdProducto.Name = "IdProducto";
 			this.IdProducto.Size = new System.Drawing.Size(100, 20);
 			this.IdProducto.TabIndex = 5;
 			// 
 			// NProducto
 			// 
-			this.NProducto.Location = new System.Drawing.Point(446, 79);
+			this.NProducto.Location = new System.Drawing.Point(476, 79);
 			this.NProducto.Name = "NProducto";
 			this.NProducto.Size = new System.Drawing.Size(100, 20);
 			this.NProducto.TabIndex = 6;
 			// 
 			// Precio
 			// 
-			this.Precio.Location = new System.Drawing.Point(446, 130);
+			this.Precio.Location = new System.Drawing.Point(476, 126);
 			this.Precio.Name = "Precio";
 			this.Precio.Size = new System.Drawing.Size(100, 20);
 			this.Precio.TabIndex = 7;
@@ -140,7 +140,7 @@
 			// 
 			this.button3.BackgroundImage = global::ProgramacionOrientadaObjetosII.Properties.Resources.if_view_refresh_118801;
 			this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button3.Location = new System.Drawing.Point(572, 116);
+			this.button3.Location = new System.Drawing.Point(594, 116);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(50, 46);
 			this.button3.TabIndex = 10;
@@ -151,7 +151,7 @@
 			// 
 			this.button2.BackgroundImage = global::ProgramacionOrientadaObjetosII.Properties.Resources.if_f_cross_256_282471;
 			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button2.Location = new System.Drawing.Point(572, 67);
+			this.button2.Location = new System.Drawing.Point(594, 67);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(50, 43);
 			this.button2.TabIndex = 9;
@@ -162,7 +162,7 @@
 			// 
 			this.BtnAdd.BackgroundImage = global::ProgramacionOrientadaObjetosII.Properties.Resources.if_sign_add_299068;
 			this.BtnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.BtnAdd.Location = new System.Drawing.Point(572, 18);
+			this.BtnAdd.Location = new System.Drawing.Point(594, 18);
 			this.BtnAdd.Name = "BtnAdd";
 			this.BtnAdd.Size = new System.Drawing.Size(50, 43);
 			this.BtnAdd.TabIndex = 8;
@@ -187,7 +187,7 @@
 			this.Controls.Add(this.richTextBox1);
 			this.Name = "Form1";
 			this.Text = "Form1";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
