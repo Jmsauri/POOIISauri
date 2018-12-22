@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{047F5BF2-2414-48F0-9DF9-88B69664BB32}</ProjectGuid>
+    <ProjectGuid>{A1D42A9D-9F39-4172-A41F-B3639F949D47}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ProgramacionOrientadaObjetosII</RootNamespace>
-    <AssemblyName>ProgramacionOrientadaObjetosII</AssemblyName>
+    <RootNamespace>Hash</RootNamespace>
+    <AssemblyName>Hash</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LibPrintTicket">
-      <HintPath>dll\LibPrintTicket.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,54 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checador_Personal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Checador_Personal.Designer.cs">
-      <DependentUpon>Checador_Personal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPuntodeVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPuntodeVenta.Designer.cs">
-      <DependentUpon>MenuPuntodeVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formatexception.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Punto_Venta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Punto_Venta.Designer.cs">
-      <DependentUpon>Punto_Venta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="system\net.cs" />
-    <Compile Include="TestPrint.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestPrint.Designer.cs">
-      <DependentUpon>TestPrint.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Verificador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Verificador.Designer.cs">
-      <DependentUpon>Verificador.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Checador_Personal.resx">
-      <DependentUpon>Checador_Personal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPuntodeVenta.resx">
-      <DependentUpon>MenuPuntodeVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,17 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Punto_Venta.resx">
-      <DependentUpon>Punto_Venta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestPrint.resx">
-      <DependentUpon>TestPrint.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Verificador.resx">
-      <DependentUpon>Verificador.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,39 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\if_sign-add_299068.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\if_f-cross_256_282471.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\if_view-refresh_118801.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\user_13230.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\09210481.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\17214223.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\17214280.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\17214357.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\20180811_123538.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\caldiabl%281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\sEGaTLAS.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

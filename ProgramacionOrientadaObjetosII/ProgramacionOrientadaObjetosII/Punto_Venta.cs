@@ -215,12 +215,12 @@ namespace ProgramacionOrientadaObjetosII
 				ticket.AddFooterLine("Vuelva Pronto");
 				ticket.AddFooterLine("Visita nuestro sitio web: www.xxx.com.mx");
 
+				ticket.PrintTicket("EC-PM-5890X");
 				//ticket.PrintTicket("EC-PM-5890X");
-				//ticket.PrintTicket("EC-PM-5890X");
-				if (ticket.PrinterExists("PDFCreator"))
-				{
-					ticket.PrintTicket("PDFCreator");
-				}
+				//if (ticket.PrinterExists("PDFCreator"))
+				//{
+					//ticket.PrintTicket("PDFCreator");
+				//}
 
 			}
 			catch (Exception error)

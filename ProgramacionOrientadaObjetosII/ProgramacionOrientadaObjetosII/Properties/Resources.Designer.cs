@@ -153,6 +153,16 @@ namespace ProgramacionOrientadaObjetosII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sEGaTLAS {
+            get {
+                object obj = ResourceManager.GetObject("sEGaTLAS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_13230 {
             get {
                 object obj = ResourceManager.GetObject("user_13230", resourceCulture);

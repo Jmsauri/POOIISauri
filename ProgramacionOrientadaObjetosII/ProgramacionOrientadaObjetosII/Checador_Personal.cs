@@ -35,14 +35,14 @@ namespace ProgramacionOrientadaObjetosII
 		private void Checador_Personal_Load(object sender, EventArgs e)
 		{
 			label1.Location = new Point(this.Width / 2 - label1.Width / 2, 10);
-			label2.Location = new Point(this.Width / 2 - label2.Width / 2, label1.Height + 30);
+			label2.Location = new Point(this.Width / 2 - label2.Width / 2, label1.Height + 29);
 			label3.Text = DateTime.Now.ToString();
-			label3.Location = new Point(this.Width / 2 - label3.Width / 2, label2.Height + label2.Height + 31);
+			label3.Location = new Point(this.Width / 2 - label3.Width / 2, label2.Height + label2.Height + 50);
 		}
 		private void timer1_Tick(object sender, EventArgs e)
 		{
 			label3.Text = DateTime.Now.ToString();
-			label3.Location = new Point(this.Width / 2 - label3.Width / 2, label2.Height + label2.Height + 31);
+			label3.Location = new Point(this.Width / 2 - label3.Width / 2, label2.Height + label2.Height + 50);
 		}
 
 		private void Checador_Personal_KeyPress(object sender, KeyPressEventArgs e)
